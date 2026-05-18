@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>FFSLC – Accueil</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: #f2f2f2;
+    padding: 20px;
+}
+
+/* Bandeau FFSLC animé */
+#header {
+    text-align: center;
+    padding: 25px 10px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #003f7f, #c8102e);
+    background-size: 300% 300%;
+    animation: ffslcGradient 8s ease infinite;
+    color: white;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+}
+
+@keyframes ffslcGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.ffslc-title {
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.app-title {
+    font-size: 22px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.app-version {
+    font-size: 12px;
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+/* Cadre central */
+#menu {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    border-left: 6px solid #003f7f;
+    border-right: 6px solid #003f7f;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+#menu h2 {
+    color: #003f7f;
+    margin-bottom: 25px;
+}
+
+/* Gros boutons */
+.big-btn {
+    display: block;
+    width: 80%;
+    margin: 15px auto;
+    padding: 18px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: #003f7f;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.big-btn:hover {
+    background: #0059b3;
+}
+
+.red-btn {
+    background: #c8102e;
+}
+
+.red-btn:hover {
+    background: #e01a3c;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Bandeau FFSLC animé -->
+<div id="header">
+    <div class="ffslc-title">FFSLC</div>
+    <div class="app-title">Gestion des listes de départs</div>
+    <div class="app-version">Version 1.00 – © Robert AURAY</div>
+</div>
+
+<!-- Menu principal -->
+<div id="menu">
+    <h2>Choisissez une action</h2>
+
+    <button class="big-btn" onclick="window.location.href='https://chiensdor.github.io/liste-de-d-part-bis1/'">
+        ➕ Créer une liste de départ
+    </button>
+
+    <button class="big-btn red-btn" onclick="window.location.href='https://chiensdor.github.io/modification-liste-d-part/'">
+        ✏️ Modifier une liste de départ
+    </button>
+</div>
+
+</body>
+</html>
